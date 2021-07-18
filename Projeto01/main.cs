@@ -56,12 +56,13 @@ class Categoria {
 }
 
 
-class Curso {
+ class Curso {
   
    private int id;
   private string descricao;
   private double preco;
   private string professor;
+  private Categoria categoria;
 
   public Curso (int id, string descricao, double preco, string professor) {
     this.id = id;
@@ -69,6 +70,11 @@ class Curso {
     this.preco = preco > 0 ? preco : 0;
     this.professor = professor;
     }
+
+  public Curso (int id, string descricao, double preco, string professor, Categoria categoria) : this(id,descricao,preco,professor) {
+    this.descricao = descricao;
+    }
+
     public void SetId(int id){
     this.id = id;
   }
@@ -81,6 +87,10 @@ class Curso {
   public void SetPreco(double preco){
     this.preco = preco > 0 ? preco : 0;
   }
+  public void SetCategoria(Categoria categoria){
+    this.categoria = categoria;
+  }
+
    public int GetId(){
     return id;
    }
@@ -93,7 +103,13 @@ class Curso {
     public double GetPreco(){
     return preco;
     }
+    public Categoria GetCategoria(){
+      return categoria;
+    }
     public override string ToString(){
-    return id + " - " + descricao + " - preço: R$ " + preco.ToString("0.00 ") + " - Professor: " + professor;
+      if (categoria == null)
+      return id + " - " + descricao + " - preço: R$ " + preco.ToString("0.00 ") + " - Professor: " + professor;
+    else
+      return id + " - " + descricao + " - preço: R$ " + preco.ToString("0.00 ") + " - Professor: " + professor + " - " + categoria.GetDescricao();
   }
 }
