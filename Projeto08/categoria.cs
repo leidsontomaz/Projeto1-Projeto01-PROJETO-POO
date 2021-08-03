@@ -36,6 +36,19 @@ class Categoria {
       cursos[np] = p;
       np++;
     }
+    private int CursoIndice(Curso p) {
+      for (int i = 0; i < np; i++)
+      if (cursos[i] == p) return i;
+      return -1;
+    }
+    public void CursoExcluir(Curso p) {
+      int n = CursoIndice(p);
+      if (n == -1) return;
+      for (int i = n; i < np -1; i++)
+      cursos[i] = cursos[i +1];
+      np--;
+
+    }
   public override string ToString(){
     return id + " - " + descricao + " - Cursos: " + np;
 }
