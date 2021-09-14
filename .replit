@@ -1,2 +1,2 @@
 language = "csharp"
-run = "mcs -out:main.exe 'Projeto07/main.cs' 'Projeto07/curso.cs' 'Projeto07/categoria.cs' 'Projeto07/ncategoria.cs' 'Projeto07/ncurso.cs' ; mono main.exe"
+run = "mcs -out:main.exe 'Projeto11/main.cs' 'Projeto11/curso.cs' 'Projeto11/categoria.cs' 'Projeto11/ncategoria.cs' 'Projeto11/ncurso.cs' 'Projeto11/aluno.cs' 'Projeto11/naluno.cs' 'Projeto11/vendacurso.cs' 'Projeto11/venda.cs' 'Projeto11/nvenda.cs'; mono main.exe"
