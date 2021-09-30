@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCurso xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Curso>
+    <Id>12</Id>
+    <Descricao>C# Iniciantes</Descricao>
+    <Preco>150</Preco>
+    <Professor>Tomaz</Professor>
+    <CategoriaId>1</CategoriaId>
+  </Curso>
+</ArrayOfCurso>
